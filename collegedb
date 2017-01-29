@@ -1,0 +1,36 @@
+create database college;
+use college;
+CREATE TABLE student_master(
+   student_id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(40) NOT NULL,
+   address VARCHAR(40) NOT NULL,
+   PRIMARY KEY ( student_id ));
+
+CREATE TABLE fy(
+   fy_id INT NOT NULL AUTO_INCREMENT,
+   student_id INT NOT NULL,
+   result double NOT NULL,
+   PRIMARY KEY (fy_id ));
+
+
+show tables;
+
+describe student_master;
+
+INSERT INTO student_master
+     (name, address)
+     VALUES
+    ("Sanjay", "Mumbai");
+INSERT INTO student_master
+     (name, address)
+     VALUES
+    ("Rajiv", "Bangalore");
+
+INSERT INTO fy
+     (student_id, result)
+     VALUES
+    (1, 81.90);
+INSERT INTO fy
+     (student_id, result)
+     VALUES
+    (2, 78.90);
